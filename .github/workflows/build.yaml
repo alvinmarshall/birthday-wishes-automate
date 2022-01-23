@@ -14,11 +14,11 @@ jobs:
       - name: setup python
         uses: actions/setup-python@v2
         with:
-          python-version: 3.9
-      - name: Install lib
+          python-version: 3.8
+      - name: Install deps
         run: |
-          - python -m pip install --upgrade pip
-          - pip install pandas
+          python -m pip install --upgrade pip
+          pip install pandas
 
       - name: execute py script
         run: |
