@@ -11,7 +11,7 @@ apiKey = os.getenv('CALL_ME_BOT_API_KEY')
 
 
 def send_message(data):
-    message_image = data['message'] + '\n' + data['name'] + '\n\n' + data['image']
+    message_image = data['message'] + '\n' + data['name'] + '\n' + data['dob'] + '\n\n' + data['image']
     resp = requests.get(f"{whatsappUrl}/whatsapp.php?phone=+{data['contact']}&text={message_image}&apikey={apiKey}")
     write_text(resp.text)
 
@@ -63,7 +63,7 @@ def load_birthday():
     df['is_birth_day'] = df[HEADERS['birthday']].apply(find_today_birthday)
     df2 = df.loc[df['is_birth_day'] == True]
     found = df2.values.tolist()
-    keys = ['name', 'contact', 'message', 'image', 'dob']
+    keys = ['name', 'contact', 'message', 'dob', 'image']
     birthdays = [dict(zip(keys, value)) for value in found]
     write_json(birthdays)
     for birthday in birthdays:
