@@ -1,1 +1,1 @@
-# birthday-wishes-automate
+# birthday-wishes-automate [![Build Birthday CI](https://github.com/alvinmarshall/birthday-wishes-automate/actions/workflows/build.yaml/badge.svg)](https://github.com/alvinmarshall/birthday-wishes-automate/actions/workflows/build.yaml)
