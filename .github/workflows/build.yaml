@@ -28,7 +28,7 @@ jobs:
           GOOGLE_SHEET_URL: ${{ secrets.GOOGLE_SHEET_URL }}
           CALL_ME_BOT_URL: ${{ secrets.CALL_ME_BOT_URL }}
           CALL_ME_BOT_API_KEY: ${{ secrets.CALL_ME_BOT_API_KEY }}
-      - name: Archive code coverage results
+      - name: Archive api reponse log
         uses: actions/upload-artifact@v2
         with:
           name: api-responses
